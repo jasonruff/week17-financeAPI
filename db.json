@@ -1,4 +1,11 @@
 {
-    "favorites": [],
-    "portfolio": []
-  }
+  "favorites": [
+    {
+      "symbol": "BROS",
+      "lastPrice": 61.94,
+      "date": "2025-03-17",
+      "id": 1
+    }
+  ],
+  "portfolio": []
+}

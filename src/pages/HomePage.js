@@ -1,3 +1,4 @@
+// src/pages/HomePage.js
 import React, { useEffect, useState } from 'react';
 import { Card, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -50,24 +51,24 @@ const HomePage = () => {
           <Card className="text-center">
             <Card.Body>
               <Card.Title>Portfolio Summary</Card.Title>
-              <Card.Text>
+              <div className="card-text-content">
                 <div className="d-flex justify-content-around">
                   <div>
                     <h5>Total Value</h5>
-                    <p>${portfolioSummary.totalValue}</p>
+                    <div>${portfolioSummary.totalValue}</div>
                   </div>
                   <div>
                     <h5>Total Investment</h5>
-                    <p>${portfolioSummary.totalInvestment}</p>
+                    <div>${portfolioSummary.totalInvestment}</div>
                   </div>
                   <div>
                     <h5>Performance</h5>
-                    <p className={portfolioSummary.percentageChange >= 0 ? "text-success" : "text-danger"}>
+                    <div className={portfolioSummary.percentageChange >= 0 ? "text-success" : "text-danger"}>
                       {portfolioSummary.percentageChange}%
-                    </p>
+                    </div>
                   </div>
                 </div>
-              </Card.Text>
+              </div>
             </Card.Body>
           </Card>
         </Col>
@@ -78,9 +79,9 @@ const HomePage = () => {
           <Card>
             <Card.Body>
               <Card.Title>Search Stocks</Card.Title>
-              <Card.Text>
+              <div className="card-text-content">
                 Search for stocks by symbol and add them to your portfolio.
-              </Card.Text>
+              </div>
               <Button as={Link} to="/search" variant="primary">Search</Button>
             </Card.Body>
           </Card>
@@ -90,9 +91,9 @@ const HomePage = () => {
           <Card>
             <Card.Body>
               <Card.Title>My Stocks</Card.Title>
-              <Card.Text>
+              <div className="card-text-content">
                 View and manage your stock portfolio.
-              </Card.Text>
+              </div>
               <Button as={Link} to="/portfolio" variant="primary">View Portfolio</Button>
             </Card.Body>
           </Card>

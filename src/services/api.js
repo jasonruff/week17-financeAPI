@@ -8,8 +8,7 @@ const JSON_SERVER_URL = 'http://localhost:3001';
 // Stock data functions
 export const searchStock = async (symbol) => {
   try {
-    // Use the stock-prices endpoint with the user's symbol
-    const url = `${API_BASE_URL}/stock-prices?identifier=${symbol}&key=${API_KEY}`;
+    const url = `/api/v1/stock-prices?identifier=${symbol}&key=${API_KEY}`;
     const response = await axios.get(url);
     return response.data;
   } catch (error) {
@@ -20,8 +19,7 @@ export const searchStock = async (symbol) => {
 
 export const getStockDetail = async (symbol) => {
   try {
-    // Same endpoint but potentially with different parameters
-    const url = `${API_BASE_URL}/stock-prices?identifier=${symbol}&key=${API_KEY}`;
+    const url = `/api/v1/stock-prices?identifier=${symbol}&key=${API_KEY}`;
     const response = await axios.get(url);
     return response.data;
   } catch (error) {
