@@ -1,7 +1,8 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_KEY = '88a87724f6345a87bc9ebc6ca811fb84';
+// src/services/api.js
+const API_KEY = process.env.REACT_APP_API_KEY;
 const API_BASE_URL = 'https://financialdata.net/api/v1';
 const JSON_SERVER_URL = 'http://localhost:3001';
 
